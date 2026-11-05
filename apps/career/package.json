@@ -1,0 +1,21 @@
+{
+  "name": "@portfolio/career",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5103 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5103 --strictPort"
+  },
+  "dependencies": {
+    "@portfolio/ui": "*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@portfolio/microfrontend-runtime": "*"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "@vitejs/plugin-react": "^5.0.0"
+  }
+}

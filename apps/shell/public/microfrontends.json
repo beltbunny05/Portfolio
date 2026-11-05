@@ -1,0 +1,6 @@
+{
+  "profile": "http://127.0.0.1:5101/entry.js",
+  "projects": "http://127.0.0.1:5102/entry.js",
+  "career": "http://127.0.0.1:5103/entry.js",
+  "contact": "http://127.0.0.1:5104/entry.js"
+}

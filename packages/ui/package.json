@@ -1,0 +1,13 @@
+{
+  "name": "@portfolio/ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./styles.css": "./styles.css"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+.contact-email {
+  font:
+    500 clamp(26px, 4vw, 56px)/1.05 'Helvetica Neue',
+    Arial,
+    sans-serif;
+  letter-spacing: -0.05em;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 680px) {
+  .contact-email {
+    font-size: clamp(20px, 5.4vw, 34px);
+  }
+}

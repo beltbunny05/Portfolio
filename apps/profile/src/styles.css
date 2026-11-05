@@ -1,0 +1,134 @@
+.hero {
+  padding: 52px 0 64px;
+  min-height: clamp(390px, 54svh, 570px);
+}
+
+.eyebrow {
+  margin: 5px 0 42px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+h1 {
+  font-size: clamp(54px, 6.65vw, 108px);
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  max-width: 1050px;
+}
+
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.headline-line {
+  display: block;
+  padding-bottom: 0.06em;
+}
+
+.hero-summary {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 42px;
+  margin-top: 52px;
+  max-width: 1010px;
+}
+
+.profile-description {
+  margin: 0;
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: -0.018em;
+  color: var(--body);
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.profile-details div {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.technology-marquee {
+  border-block: 1px solid var(--line);
+  overflow: hidden;
+  padding: 18px 0;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+}
+
+.technology-marquee div {
+  display: inline-flex;
+  gap: 48px;
+  animation: marquee-scroll 38s linear infinite;
+  padding-right: 48px;
+}
+
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 980px) {
+  .profile-details {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 34px;
+  }
+  .hero-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 680px) {
+  .profile-details {
+    grid-column: 1;
+  }
+  h1 {
+    font-size: clamp(38px, 10.5vw, 70px);
+    line-height: 0.92;
+  }
+  .profile-description {
+    font-size: 16px;
+  }
+  .eyebrow {
+    margin-bottom: 26px;
+  }
+  .hero-summary {
+    margin-top: 30px;
+    gap: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .technology-marquee div {
+    animation: none;
+  }
+}
+
+.role-focus {
+  margin-top: 24px;
+  color: var(--body);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}

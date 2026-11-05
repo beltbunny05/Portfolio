@@ -4,3 +4,6 @@ playwright-report/
 test-results/
 .env
 .env.local
+
+apps/shell/public/resume.html
+apps/shell/public/resume.js

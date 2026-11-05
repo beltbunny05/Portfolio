@@ -12,14 +12,24 @@
   },
   "scripts": {
     "dev": "node scripts/serve.mjs dev",
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run typecheck && npm run build --workspaces --if-present && npm run prerender",
     "preview": "node scripts/serve.mjs preview",
     "test": "playwright test",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "prerender": "tsx scripts/prerender.tsx",
+    "check": "npm run format:check && npm run typecheck",
+    "resume": "tsx scripts/prerender.tsx --resume-only",
+    "predev": "npm run resume"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.0",
-    "prettier": "^3.5.0"
+    "prettier": "^3.5.0",
+    "typescript": "^5.8.3",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0"
   }
 }

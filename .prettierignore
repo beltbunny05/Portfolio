@@ -3,3 +3,6 @@ node_modules
 package-lock.json
 playwright-report
 test-results
+
+apps/shell/public/resume.html
+apps/shell/public/resume.js

@@ -7,12 +7,15 @@ const require = createRequire(import.meta.url);
 const viteExecutable = join(dirname(require.resolve('vite/package.json')), 'bin/vite.js');
 const workspaceDirectory = fileURLToPath(new URL('../', import.meta.url));
 const mode = process.argv[2];
+const basePort = Number(process.env.PORTFOLIO_BASE_PORT ?? 5100);
+if (!Number.isInteger(basePort) || basePort < 1024 || basePort > 65531)
+  throw new Error('Invalid PORTFOLIO_BASE_PORT.');
 const applications = [
-  { name: 'shell', port: 5100 },
-  { name: 'profile', port: 5101 },
-  { name: 'projects', port: 5102 },
-  { name: 'career', port: 5103 },
-  { name: 'contact', port: 5104 },
+  { name: 'shell', port: basePort },
+  { name: 'profile', port: basePort + 1 },
+  { name: 'projects', port: basePort + 2 },
+  { name: 'career', port: basePort + 3 },
+  { name: 'contact', port: basePort + 4 },
 ];
 const remoteApplications = applications.filter((application) => application.name !== 'shell');
 const runningProcesses = new Set();

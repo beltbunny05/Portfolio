@@ -21,7 +21,9 @@
     "prerender": "tsx scripts/prerender.tsx",
     "check": "npm run format:check && npm run typecheck",
     "resume": "tsx scripts/prerender.tsx --resume-only",
-    "predev": "npm run resume"
+    "predev": "npm run resume",
+    "build:pages": "node scripts/build-pages.mjs",
+    "test:pages": "playwright test --config playwright.pages.config.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.0",

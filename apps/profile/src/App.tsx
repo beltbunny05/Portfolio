@@ -61,7 +61,7 @@ export default function ProfileApp() {
               </a>
               <a
                 className="text-link"
-                href="/resume.html"
+                href="./resume.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >

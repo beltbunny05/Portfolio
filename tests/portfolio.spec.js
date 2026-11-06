@@ -142,7 +142,7 @@ test('provides case study links, share metadata and a printable resume', async (
   );
   await expect(page.getByRole('link', { name: 'View résumé' })).toHaveAttribute(
     'href',
-    '/resume.html',
+    './resume.html',
   );
   await page.goto('/resume.html');
   await expect(page.getByRole('heading', { name: 'Software Engineer', exact: true })).toBeVisible();

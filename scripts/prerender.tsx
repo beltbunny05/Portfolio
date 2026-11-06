@@ -134,9 +134,9 @@ if (!resumeOnly) {
   html = html.replace(emptyRoot, () => `<div id="root">${initialContent}</div>`);
   if (siteUrl) {
     const canonical = siteUrl.href.endsWith('/') ? siteUrl.href : siteUrl.href + '/';
-    html = html.replaceAll(
-      'content="/social-card.png"',
-      `content="${new URL('social-card.png', canonical).href}"`,
+    html = html.replace(
+      /content="[^"]*social-card\.png"/g,
+      () => `content="${new URL('social-card.png', canonical).href}"`,
     );
     html = html.replace(
       '</head>',

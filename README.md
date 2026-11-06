@@ -45,6 +45,8 @@ npm test
 
 Os testes usam as portas 6100–6104, sem interromper `dev`. O CI executa essas verificações automaticamente. O build gera HTML inicial com conteúdo, currículo imprimível e os bundles. Recompile o site após mudar conteúdo para atualizar esse HTML.
 
-Publique cada `apps/<módulo>/dist` separadamente. Configure CORS e atualize as URLs em `apps/shell/dist/microfrontends.json`; preserve chunks antigos ou use URLs versionadas. Defina a variável `SITE_URL` com seu domínio real antes do build para URLs absolutas de compartilhamento e canonical.
+GitHub Pages: o workflow `Publish portfolio` valida e publica a branch `main`. Ative **Settings → Pages → Source: GitHub Actions**. Para validar o pacote local: `npm run build:pages && npm run test:pages`.
+
+Para outras hospedagens, publique cada `apps/<módulo>/dist` separadamente. Configure CORS e atualize as URLs em `apps/shell/dist/microfrontends.json`; preserve chunks antigos ou use URLs versionadas. Defina a variável `SITE_URL` com seu domínio real antes do build para URLs absolutas de compartilhamento e canonical.
 
 Edite o código-fonte; `dist` e `node_modules` são gerados. Links de demonstração são opcionais em `projects.ts`. Os fluxos ilustrados são diagramas, não capturas dos aplicativos.
